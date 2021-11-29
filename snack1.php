@@ -17,7 +17,7 @@ if(strpos($mail, ".") !== false && strpos($mail, "@") !== false){
 }
 
 //verifico se tutti i dati sono corretti
-if(strlen($name) > 3 && is_numeric($age) && $mailValida !== false){
+if(strlen($name) > 3 && is_numeric($age) && $mailValida === true){
     $accesso = true;
 }else{
     $accesso = false;
