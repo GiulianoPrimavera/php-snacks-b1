@@ -44,21 +44,6 @@ $posts = [
 $arraykeys = array_keys($posts);
 // var_dump($arraykeys);
 
-$elementoUno = $arraykeys[0];
-// var_dump($posts[$elementoUno])
-
-
-for($i = 0; $i < count($posts); $i++){
-    //recupero il singolo elemento dell'array di oggetti $post che ha come key $arraykeys[$i] 
-    $singlePost = $posts[$arraykeys[$i]];
-
-    var_dump($singlePost);
-
-    /* for($j = 0; $j < count($singlePost); $j++){
-
-    } */
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -71,6 +56,20 @@ for($i = 0; $i < count($posts); $i++){
 </head>
 <body>
     <?php 
+    for($i = 0; $i < count($posts); $i++){
+        //recupero il singolo elemento dell'array di oggetti $post che ha come key $arraykeys[$i] 
+        $singlePost = $posts[$arraykeys[$i]];
+        // var_dump($singlePost);
+        $datePost = $arraykeys[$i];
+        echo "<h1> in data $datePost sono stati pubblicati questi posts </h1><br>";
+    
+        for($j = 0; $j < count($singlePost); $j++){
+            //stampo a schermo il valore di ogni key contenuta in ogni oggetto all'interno dell'array posts
+            echo $singlePost[$j]["title"] . "<br>";
+            echo $singlePost[$j]["author"] . "<br>";
+            echo $singlePost[$j]["text"] . "<br><br><br><br>";
+        }
+    }
     ?>
     
 </body>
