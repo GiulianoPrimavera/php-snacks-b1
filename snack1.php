@@ -1,5 +1,11 @@
 <?php 
 
+$mail = $_GET["mail"];
+$age = $_GET["age"];
+$name = $_GET["name"];
+
+// echo $mail . " " . $age . " " . $name
+echo "<p>name : $name</p> <br> <p>mail : $mail</p> <br> <p>age : $age</p> <br>"
 ?>
 
 <!DOCTYPE html>
