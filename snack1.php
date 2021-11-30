@@ -1,5 +1,10 @@
 <?php 
 
+//verifico se i dati sono presenti o meno
+if (!isset($_GET["age"]) || !isset($_GET["name"]) || !isset($_GET["mail"])) {
+    exit("Dati mancanti");
+}
+
 //prendo i dati
 $age = $_GET["age"];
 $name = $_GET["name"];
