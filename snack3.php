@@ -1,20 +1,12 @@
 <?php 
-$numbers[] = rand(0, 100);
-var_dump($numbers);
+$numbers = [];
+// var_dump($numbers);
 
-
-for($i = 0; $i <= 14; $i++){
+while (count($numbers) <= 15) {
     $singleNumber = rand(0, 100);
-    $doppione = in_array($singleNumber, $numbers);
-    
-    if($doppione){
-        //se $single number è già contenuto all'interno dell'array allora ferma tutto (per niente efficace)
-        exit;
-    }else{
+    if (!in_array($singleNumber, $numbers)) {
         $numbers[] = $singleNumber;
     }
-
-
 }
 
 
